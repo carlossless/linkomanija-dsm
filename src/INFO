@@ -1,0 +1,11 @@
+{
+  "name": "linkomanija",
+  "displayname": "Linkomanija",
+  "description": "A popular private tracker in Lithuania.",
+  "accountsupport": true,
+  "version": "0.0.1",
+  "site": "https://www.linkomanija.net",
+  "module": "SynologyDLMSearchLinkomanija.php",
+  "type": "search",
+  "class": "SynologyDLMSearchLinkomanija"
+}

@@ -1,0 +1,23 @@
+{
+    "name": "carlossless/linkomanija-dlm",
+    "require-dev": {
+        "phpspec/phpspec": "^6.1",
+        "overtrue/phplint": "^1.2"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "src"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Karolis Stasaitis",
+            "email": "contact@carlossless.io"
+        }
+    ],
+    "require": {}
+}

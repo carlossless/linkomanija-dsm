@@ -1,0 +1,33 @@
+on: 
+  push
+
+name: Build and Test
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build DLM
+        run: make
+      - name: Upload DLM
+        uses: actions/upload-artifact@v1
+        with:
+          name: linkomanija.dlm
+          path: linkomanija.dlm
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.6'
+      - name: Composer
+        run: composer install
+      - name: Lint
+        run: bin/phplint src/
+      - name: Test
+        run: bin/phpspec run
